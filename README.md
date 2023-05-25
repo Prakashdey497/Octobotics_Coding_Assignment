@@ -82,7 +82,7 @@ rosrun inverted_pendulum_controller sinosodial_force_publisher.py
 
 - Plot the applied control input using **rqt_plot**.
 
-- [`Recorded video`](/data/sinosodial_input.mp4) of changing frequencies and amplitudes of oscillations.
+- [`Recorded video`](/data/sinosodial_input.webm) of changing frequencies and amplitudes of oscillations.
 
 ### Goal3: Balance the inverted pendulum Using PID
 
@@ -104,6 +104,6 @@ Step 3: Set the initial parameters:
 rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 3.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
 ```
 
-- [`Recorded video`](/data/pid.mp4) After applied PID.
+- [`Recorded video`](/data/pid.webm) After applied PID.
 
 
