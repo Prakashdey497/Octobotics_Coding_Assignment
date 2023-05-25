@@ -169,9 +169,6 @@ class InvertedPendulum:
         :return: none
         """
         self.force = msg.force
-        # rospy.loginfo("apply force",self.force)
-        hello_str = "publish force %s" % self.force
-        rospy.loginfo(hello_str)
         
         
 

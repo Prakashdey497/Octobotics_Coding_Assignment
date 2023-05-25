@@ -60,7 +60,7 @@ roslaunch inverted_pendulum_sim inverted_pendulum_sim.launch
 ```
 Step 2: Set the initial parameters:
 ```bash
-rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 3.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
+rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 1.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
 ```
 
 ### Goal 2: Send sinusoidal force input to the cart
@@ -72,7 +72,7 @@ roslaunch inverted_pendulum_sim inverted_pendulum_sim.launch
 
 Step 2: Set the initial parameters:
 ```bash
-rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 3.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
+rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 1.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
 ```
 
 Step 3: Run the sinusoidal force publisher:
