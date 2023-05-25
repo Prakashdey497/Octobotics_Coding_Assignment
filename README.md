@@ -7,9 +7,11 @@
 ### Dependencies
 
 - [`pygame`](https://pypi.org/project/pygame/)
+- [`rqt_plot`](http://wiki.ros.org/rqt_plot)
 
 ```bash
 pip install pygame
+rosdep install rqt_plot
 ```
 
 ### Usage
@@ -25,7 +27,7 @@ mkdir -p ~/catkin_ws
 git clone https://github.com/Prakashdey497/Octobotics_Coding_Assignment.git
 ```
 
-copy src folder from clone directory paste it on your_workspace
+Copy the src folder from the cloned repository and paste it into your workspace. The folder structure should look like this:
 
 **Folder structure Look like**:
 
@@ -52,49 +54,56 @@ source devel/setup.bash
 ## Assignment Task:
 
 ### Goal1: Run the inverted pendulum sim using the initial parameters
-- Run the inverted pendulum simulation
+Step 1:Launch the inverted pendulum simulation:
 ```bash
 roslaunch inverted_pendulum_sim inverted_pendulum_sim.launch
 ```
-- Set the initial parameter
+Step 2: Set the initial parameters:
 ```bash
 rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 3.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
 ```
 
 ### Goal 2: Send sinusoidal force input to the cart
-Step1.
+
+Step 1: Launch the inverted pendulum simulation:
 ```bash
 roslaunch inverted_pendulum_sim inverted_pendulum_sim.launch
 ```
 
-Step2.
+Step 2: Set the initial parameters:
 ```bash
 rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 3.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
 ```
 
-Step3.
+Step 3: Run the sinusoidal force publisher:
 ```bash
 rosrun inverted_pendulum_controller sinosodial_force_publisher.py
 ```
 
-- Plot the applyed force on the rqt_plot
-```bash
-rqt_plot
-```
+- Plot the applied control input using **rqt_plot**.
+
+- [`Recorded video`](/data/sinosodial_input.mp4) of changing frequencies and amplitudes of oscillations.
 
 ### Goal3: Balance the inverted pendulum Using PID
 
- Step1. 
+
+Step 1: Launch the inverted pendulum simulation:
+
  ```bash
 roslaunch inverted_pendulum_sim inverted_pendulum_sim.launch
  ```
-Step2.
+Step 2: Launch the controller:
+
 ```bash
 roslaunch inverted_pendulum_controller controller.launch
 ```
-Step3:
+Step 3: Set the initial parameters:
+
+
 ```bash
 rosservice call /inverted_pendulum/set_params "{pendulum_mass: 2.0, pendulum_length: 300.0, cart_mass: 0.5, theta_0: 3.14, theta_dot_0: 0.0,theta_dot_dot_0: 0.0, cart_x_0: 0.0, cart_x_dot_0: 0.0, cart_x_dot_dot_0: 0.0}"
 ```
+
+- [`Recorded video`](/data/pid.mp4) After applied PID.
 
 
