@@ -1,0 +1,6 @@
+<launch>
+
+    <!-- <node pkg="inverted_pendulum_controller" type="inverted_force_publisher.py" name="inverted_force_publisher" output="screen"/> -->
+    <node pkg="inverted_pendulum_controller" type="PIDController.py" name="PIDController" output="screen"/>
+
+</launch>
